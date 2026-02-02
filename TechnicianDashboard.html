@@ -4,42 +4,41 @@
 <meta charset="UTF-8">
 <title>หน้าช่างซ่อม</title>
 <style>
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-    margin: 0;
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
 }
-header {
-    background: #1abc9c;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 22px;
+header{
+    background:#1abc9c;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
 }
-.container {
-    padding: 20px;
+.container{
+    padding:30px;
 }
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.empty-box{
+    background:white;
+    border-radius:12px;
+    padding:40px;
+    text-align:center;
+    color:#888;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-.status {
-    font-weight: bold;
-    color: #e67e22;
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#3498db;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 }
-button {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-button:hover {
-    background: #2980b9;
+button:hover{
+    background:#2980b9;
 }
 </style>
 </head>
@@ -48,18 +47,10 @@ button:hover {
 <header>🔧 หน้าจอช่างซ่อม</header>
 
 <div class="container">
-    <div class="card">
-        <h3>คอมพิวเตอร์ห้อง 402</h3>
-        <p>อาการ: เปิดไม่ติด</p>
-        <p class="status">สถานะ: รอซ่อม</p>
-        <button>อัปเดตสถานะ</button>
-    </div>
-
-    <div class="card">
-        <h3>เครื่องพิมพ์สำนักงาน</h3>
-        <p>อาการ: กระดาษติด</p>
-        <p class="status">สถานะ: กำลังซ่อม</p>
-        <button>อัปเดตสถานะ</button>
+    <div class="empty-box">
+        <h2>ยังไม่มีรายการแจ้งซ่อม</h2>
+        <p>เมื่อมีการแจ้งซ่อม ระบบจะแสดงข้อมูลที่นี่</p>
+        <button>รีเฟรชรายการ</button>
     </div>
 </div>
 
