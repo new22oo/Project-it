@@ -5,18 +5,41 @@
 <title>หน้าช่างซ่อม</title>
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
     margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
 }
-header{
+.sidebar{
+    width:220px;
+    height:100vh;
     background:#1abc9c;
     color:white;
-    padding:15px;
-    text-align:center;
-    font-size:22px;
+    position:fixed;
+    padding-top:20px;
 }
-.container{
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+.sidebar a{
+    display:block;
+    padding:12px 20px;
+    color:white;
+    text-decoration:none;
+}
+.sidebar a:hover{
+    background:rgba(255,255,255,0.2);
+}
+.main{
+    margin-left:220px;
+}
+header{
+    background:white;
+    padding:15px;
+    font-size:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.content{
     padding:30px;
 }
 .empty-box{
@@ -27,30 +50,25 @@ header{
     color:#888;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-button{
-    margin-top:20px;
-    padding:10px 20px;
-    border:none;
-    border-radius:8px;
-    background:#3498db;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-button:hover{
-    background:#2980b9;
-}
 </style>
 </head>
 <body>
 
-<header>🔧 หน้าจอช่างซ่อม</header>
+<div class="sidebar">
+    <h2>🔧 ช่าง</h2>
+    <a href="#">📋 รายการแจ้งซ่อม</a>
+    <a href="#">🛠️ งานที่รับผิดชอบ</a>
+    <a href="#">📦 อุปกรณ์</a>
+    <a href="#">🚪 ออกจากระบบ</a>
+</div>
 
-<div class="container">
-    <div class="empty-box">
-        <h2>ยังไม่มีรายการแจ้งซ่อม</h2>
-        <p>เมื่อมีการแจ้งซ่อม ระบบจะแสดงข้อมูลที่นี่</p>
-        <button>รีเฟรชรายการ</button>
+<div class="main">
+    <header>แดชบอร์ดช่างซ่อม</header>
+    <div class="content">
+        <div class="empty-box">
+            <h3>ยังไม่มีรายการแจ้งซ่อม</h3>
+            <p>ข้อมูลจะแสดงเมื่อมีการแจ้งซ่อม</p>
+        </div>
     </div>
 </div>
 
