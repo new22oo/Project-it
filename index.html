@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Repair - New Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TECH-FIX IT</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="index.html" class="active">New Request</a></li>
+            <li><a href="status.html">My Requests</a></li>
+            <li><a href="knowledge.html">Knowledge Base</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>New Repair Request</h2>
+        <form id="repairForm">
+            <div class="form-group"><label>ชื่อผู้แจ้ง:</label><input type="text" name="name" required></div>
+            <div class="form-group"><label>รหัสพนักงาน:</label><input type="text" name="employeeId" required></div>
+            <div class="form-group">
+                <label>แผนก:</label>
+                <select name="department">
+                    <option value="IT">IT Support</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Operations">Operations</option>
+                </select>
+            </div>
+            <div class="form-group"><label>ประเภทอุปกรณ์:</label>
+                <div class="radio-group">
+                    <input type="radio" name="computerType" value="Laptop" checked> Laptop
+                    <input type="radio" name="computerType" value="PC"> PC
+                </div>
+            </div>
+            <div class="form-group"><label>Serial Number:</label><input type="text" name="serialNumber"></div>
+            <div class="form-group"><label>รายละเอียดปัญหา:</label><textarea name="problem" rows="3"></textarea></div>
+            <div class="form-group"><label>Priority: <span id="priorityValue">3</span></label>
+                <input type="range" id="priority" name="priority" min="1" max="5" value="3">
+            </div>
+            <div class="form-group"><label>วันที่นัดหมาย:</label><input type="date" name="date" required></div>
+            <button type="submit" class="btn-submit">Submit Request</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
