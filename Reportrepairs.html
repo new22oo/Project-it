@@ -1,30 +1,118 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>รายการแจ้งซ่อม</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Knowledge Base</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2f4154;
+            padding: 14px 40px;
+            height: 56px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            padding-bottom: 6px;
+            opacity: 0.9;
+            transition: 0.2s;
+        }
+
+        .nav-links li a:hover {
+            opacity: 1;
+        }
+
+        .nav-links li a.active {
+            border-bottom: 2px solid #1da1f2;
+            opacity: 1;
+        }
+
+        /* ===== Content ===== */
+        .main {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-box {
+            background-color: #ffffff;
+            width: 700px;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .content-box h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .content-box p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
- <nav class="navbar">
+
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="logo">TECH-FIX IT</div>
         <ul class="nav-links">
             <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="index.html" class="active">New Request</a></li>
+            <li><a href="index.html">New Request</a></li>
             <li><a href="status.html">My Requests</a></li>
-            <li><a href="knowledge.html">Knowledge Base</a></li>
+            <li><a href="knowledge.html" class="active">Knowledge Base</a></li>
             <li><a href="admin.html">Admin</a></li>
         </ul>
     </nav>
-<div class="main">
-  <header>แดชบอร์ดช่างซ่อม</header>
-  <div class="content">
-    <div class="empty-box">
-      <h3>ยังไม่มีรายการแจ้งซ่อม</h3>
-      <p>ข้อมูลจะแสดงเมื่อมีการแจ้งซ่อม</p>
+
+    <!-- Content -->
+    <div class="main">
+        <div class="content-box">
+            <h2>คลังความรู้เบื้องต้น</h2>
+
+            <p><b>1. วิธีการรีเซ็ต Password อีเมล</b></p>
+            <p>กรุณาติดต่อแผนก IT หรือกดลิงก์ลืมรหัสผ่านหน้าเว็บ...</p>
+
+            <br>
+
+            <p><b>2. คอมพิวเตอร์เปิดไม่ติด</b></p>
+            <p>ตรวจสอบปลั๊กไฟและสายเชื่อมต่อก่อนแจ้งซ่อม...</p>
+        </div>
     </div>
-  </div>
-</div>
 
 </body>
 </html>

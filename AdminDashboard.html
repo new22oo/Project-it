@@ -3,70 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <title>หน้าผู้ดูแลระบบ</title>
+
 <style>
-body{
+/* ===== Reset ===== */
+*{
     margin:0;
-    font-family:Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
     background:#eef1f5;
 }
-.sidebar{
-    width:230px;
-    height:100vh;
-    background:#34495e;
-    color:white;
+
+/* ===== Navbar ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2f4154;
+    padding:14px 40px;
+    height:56px;
     position:fixed;
-    padding-top:20px;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 }
-.sidebar h2{
-    text-align:center;
-    margin-bottom:30px;
+
+.logo{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:0.5px;
 }
-.sidebar a{
-    display:block;
-    padding:12px 20px;
-    color:white;
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+.nav-links li a{
+    color:#ffffff;
     text-decoration:none;
+    font-size:13px;
+    padding-bottom:6px;
+    opacity:0.9;
 }
-.sidebar a:hover{
-    background:rgba(255,255,255,0.2);
+
+.nav-links li a:hover{
+    opacity:1;
 }
+
+.nav-links li a.active{
+    border-bottom:2px solid #1da1f2;
+    opacity:1;
+}
+
+/* ===== Main ===== */
 .main{
-    margin-left:230px;
+    margin-top:56px; /* เว้นพื้นที่ให้ navbar */
 }
+
 header{
     background:white;
-    padding:15px;
+    padding:15px 30px;
     font-size:20px;
     box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
+
 .content{
     padding:30px;
+    display:flex;
+    justify-content:center;
 }
+
 .box{
     background:white;
     border-radius:15px;
     padding:40px;
     text-align:center;
     color:#7f8c8d;
+    width:600px;
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 </style>
 </head>
+
 <body>
 
- <nav class="navbar">
-        <div class="logo">TECH-FIX IT</div>
-        <ul class="nav-links">
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="index.html" class="active">New Request</a></li>
-            <li><a href="status.html">My Requests</a></li>
-            <li><a href="knowledge.html">Knowledge Base</a></li>
-            <li><a href="admin.html">Admin</a></li>
-        </ul>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">TECH-FIX IT</div>
+    <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">New Request</a></li>
+        <li><a href="status.html">My Requests</a></li>
+        <li><a href="knowledge.html">Knowledge Base</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+    </ul>
+</nav>
 
+<!-- Main -->
 <div class="main">
     <header>แดชบอร์ดผู้ดูแลระบบ</header>
+
     <div class="content">
         <div class="box">
             <h3>ยังไม่มีข้อมูลแสดง</h3>
